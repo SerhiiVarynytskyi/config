@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Command Aliases
+alias psg='ps -ef|grep '
+alias ack='ack-grep'
+
+## ls aliases
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias lh='ls -alFh'
+
+## Git aliases
+alias g='git'
+alias ga='git add'
+alias gaa='git add -A'
+alias gb='git blame -CCC'
+alias gc='git commit'
+alias gcaa='git commit -a --amend -CHEAD'
+alias gd='git diff'
+alias gdw='git diff --word-diff'
+alias gcl='git clean -fd'
+alias gco='git checkout'
+
+alias gl='git_pretty_log'
+alias gld='git log -p'
+alias gls='git shortlog -sn'
+alias gst='git status -sb'
+
+## Dev aliases
+alias prp='git pull && rake && git push'
+alias filecomp='file_composition'
+
+
+alias clip='xclip -i -selection clipboard'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+alias project='cd ~/project'
+
+alias mc="/usr/local/Cellar/midnight-commander/4.8.11/libexec/mc/mc-wrapper.sh"
+
+
+

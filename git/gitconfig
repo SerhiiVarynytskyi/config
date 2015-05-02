@@ -1,0 +1,52 @@
+[user]
+	name = developer
+	email = developer@local.com
+
+[ui]
+	color = auto
+[color]
+	ui = true
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.config/config_dir/gitignore
+	whitespace = space-before-tab
+
+[push]
+	default = simple
+
+
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+
+[diff]
+	tool = vimdiff
+[alias]
+	l     = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author-date-order
+	lg    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author-date-order --all
+	slg   = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author-date-order --simplify-by-decoration
+	stat  = status
+	st    = status
+	ff    = merge --ff-only
+	index = diff --cached
+[merge]
+	conflictstyle = diff3
+[mergetool "tabbedmeld"]
+	cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE
+
+[mergetool "fugitive"]
+	cmd = vim -f -c Gdiff $MERGED
+
+[include]
+	path = ~/.gitconfig.local
