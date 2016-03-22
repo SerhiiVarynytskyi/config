@@ -15,6 +15,7 @@
 #    PATH="$HOME/bin:$PATH"
 #fi
 
+export LANG=ru_RU.UTF-8
 
 config_dir="$HOME/.config/config_dir"
 
@@ -38,22 +39,14 @@ ANDROID_TOOLS=$ANDROID_SDK/tools
 ANDROID_PLATFORM_TOOLS=$ANDROID_SDK/platform-tools
 
 
-M2_HOME=/usr/local/apache-maven/apache-maven-3.1.1
-M2=$M2_HOME/bin
-M3_HOME=/usr/local/apache-maven/apache-maven-3.2.1
-M3=$M3_HOME/bin
-MAVEN_OPTS="-Xms256m -Xmx512m"
+#Maven
+#M2_HOME=/usr/local/apache-maven/apache-maven-3.1.1
+#M2=$M2_HOME/bin
+#M3_HOME=/usr/local/apache-maven/apache-maven-3.2.1
+#M3=$M3_HOME/bin
+#MAVEN_OPTS="-Xms256m -Xmx512m"
 
 
-PATH="$PATH:$ANDROID_SDK:$ANDROID_NDK:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$M2"
+PATH="$PATH:$ANDROID_SDK:$ANDROID_NDK:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS"
 
 
-# MacPorts Installer addition adding an appropriate PATH variable for use with MacPorts.
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-export LANG=ru_RU.UTF-8
-
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-# vi: ft=sh

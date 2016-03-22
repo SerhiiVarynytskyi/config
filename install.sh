@@ -41,46 +41,17 @@ fi
 
 
 ## Install configuration files.
-#for file in bash_profile bashrc gitconfig profile screenrc vimrc zshrc vim zprofile Xresources tmux.conf
+#for file in bash_profile.sh bashrc.sh gitconfig profile.sh screenrc vimrc zshrc vim zprofile Xresources tmux.conf
 #do
 #	install_file "$file" ".$file"
 #done
 
 # Install bash configuration files.
-install_file "bash/bash_profile" ".bash_profile"
-install_file "bash/bash_login" ".bash_login"
-install_file "bash/bashrc" ".bashrc"
+install_file "bash/bash_profile.sh" ".bash_profile"
+install_file "bash/bash_login.sh" ".bash_login"
+install_file "bash/bashrc.sh" ".bashrc"
 
-install_file "profile" ".profile"
+install_file "profile.sh" ".profile"
 install_file "git/gitconfig" ".gitconfig"
 
 
-
-
-## Check for required tools.
-#check_commands() {
-#	local missing=0
-#	for tool in "$@"; do
-#		if ! command -v "$tool" > /dev/null; then
-#			echo "$tool missing."
-#			missing=1
-#		fi
-#	done
-#	return $missing
-#}
-#required_commands="git vim"
-#if ! check_commands $required_commands; then
-#	exit 1
-#fi
-
-## Install vundle.
-#if [ ! -d "vim/bundle/vundle" ]; then
-#	mkdir -p "vim/bundle"
-#	git clone https://github.com/gmarik/vundle.git "vim/bundle/vundle"
-#fi
-#vim +PluginClean +PluginUpdate +qall
-#
-## Install zsh-syntax-highlighting.
-#if [ ! -d "zsh-syntax-highlighting" ]; then
-#	git clone git://github.com/zsh-users/zsh-syntax-highlighting
-#fi

@@ -2,7 +2,7 @@
 
 #echo "bashrc executed"
 
-source "$HOME/.config/config_dir/shellrc"
+source "$HOME/.config/config_dir/shellrc.sh"
 
 config_dir="$HOME/.config/config_dir"
 
